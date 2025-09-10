@@ -20,7 +20,7 @@ module.exports = {
 		const { participantIDs } = event;
 		const lengthAllUser = participantIDs.length;
 		const mentions = [];
-		let body = args.join(" ") || "@all";
+		let body = args.join(" ") || "@aleatoire";
 		let bodyLength = body.length;
 		let i = 0;
 		for (const uid of participantIDs) {
