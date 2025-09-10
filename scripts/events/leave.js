@@ -23,9 +23,9 @@ module.exports = {
 			session2: "noon",
 			session3: "afternoon",
 			session4: "evening",
-			leaveType1: "left",
-			leaveType2: "was kicked from",
-			defaultLeaveMessage: "{userName} {type} the group"
+			leaveType1: "𝐞𝐬𝐭 𝐚𝐥𝐥é 𝐬𝐞 𝐩𝐞𝐧𝐝𝐫𝐞 𝐡𝐨𝐫𝐬 𝐝𝐮",
+			leaveType2: "𝐚 𝐞𝐭𝐞 𝐜𝐡𝐚𝐬𝐬é 𝐝𝐮 ",
+			defaultLeaveMessage: "⛔𝐅𝐋𝐀𝐒𝐇 𝐈𝐍𝐅𝐎⛔\n✥------- † -------✥\n🍀{userName}🍀 {type} 𝐠𝐫𝐨𝐮𝐩𝐞\n\n🍁𝗟𝗔𝗧𝗛𝗨𝗠🍁"
 		}
 	},
 
