@@ -1,0 +1,39 @@
+const axios = require("axios");
+
+module.exports = {
+  config: {
+    name: "waifu",
+    version: "1.0",
+    author: "rudeus ackerman",
+    role: 0,
+    category: "fun",
+    shortDescription: "Envoie une image aléatoire d'une waifu sexy",
+    longDescription: "Cette commande récupère une image aléatoire d'une waifu sexy depuis une API et l'envoie dans la conversation.",
+    guide: {
+      en: "{pn}"
+    }
+  },
+
+  onStart: async function ({ api, event }) {
+    try {
+      // API waifu (NSFW ou SFW sexy selon ton choix)
+      const url = "https://api.waifu.pics/nsfw/waifu"; // sexy NSFW
+      // const url = "https://api.waifu.pics/sfw/waifu"; // si tu veux safe
+
+      const res = await axios.get(url);
+      const imageUrl = res.data.url;
+
+      api.sendMessage(
+        {
+          body: "🔥 Voici ta waifu sexy 🔥",
+          attachment: await global.utils.getStreamFromURL(imageUrl)
+        },
+        event.threadID,
+        event.messageID
+      );
+    } catch (err) {
+      console.error(err);
+      api.sendMessage("⚠️ Erreur lors de la récupération de la waifu.", event.threadID, event.messageID);
+    }
+  }
+};
